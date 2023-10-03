@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -8,6 +9,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	 font-size: 16px;
+	 line-height: 1.5;
+	 font-family: Arial, sans-serif;
 }
 
 .container {
@@ -17,6 +21,9 @@ body {
 	background-color: #fbf8be;
 	overflow: hidden;
 	display: flex;
+	max-width: 960px; 
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .rules {
@@ -28,11 +35,14 @@ body {
 
 .player {
 	flex: 50%;
-	padding: 150px;
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	transition: all 0.75s;
+	margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .name {
@@ -40,17 +50,20 @@ body {
 	font-weight: bold;
 	font-size: 38px;
 	text-align: center;
+	font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .pl {
-	font-size: 24px;
+	font-size: 18px;
 }
 
 .tscore {
 	background-color: #fff;
 	border-radius: 9px;
-	width: 65%;
-	padding: 2rem;
+	width: 100%;
+	padding: 1rem;
 	text-align: center;
 	transition: all 0.75s;
 }
@@ -71,24 +84,24 @@ body {
 }
 
 .current {
-	margin-top: 10rem;
 	background-color: #fceded;
-	border-radius: 9px;
-	width: 65%;
-	padding: 2rem;
-	text-align: center;
-	transition: all 0.75s;
+    border-radius: 9px;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .current-label {
 	text-transform: uppercase;
-	margin-bottom: 1rem;
-	font-size: 1.7rem;
+	margin-bottom: 10px;
+	font-size: 16px;
 	color: #ddd;
 }
 
 .current-score {
-	font-size: 3.5rem;
+	font-size: 24px;
+    font-weight: bold;
+    color: #c7365f;
 }
 
 .btn {
@@ -97,13 +110,14 @@ body {
 	transform: translateX(-50%);
 	color: rgb(34, 44, 40);
 	border: none;
-	font-size: 30px;
+	font-size: 18px;
 	cursor: pointer;
 	font-weight: bold;
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: #c7365f;
 	backdrop-filter: blur(10px);
-	padding: 10px 30px;
+	padding: 10px 20px;
 	border-radius: 10px;
+	margin-top: 10px;
 }
 
 .btn--new {
@@ -137,3 +151,15 @@ body {
 .hidden {
 	display: none;
 }
+@media (max-width: 768px) {
+	.player {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+
